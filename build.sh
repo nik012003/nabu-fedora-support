@@ -2,7 +2,12 @@
 set -e
 COPR_PROJECT="nabu-support"
 
-projects=(alsa-ucm-conf-xiaomi-nabu)
+projects=(alsa-ucm-conf-xiaomi-nabu tqftpserv xiaomi-nabu-firmware)
+
+# Build all projects if no arguments are passed
+if [ "$#" -gt 0 ]; then
+    projects=("$@")
+fi
 
 for project in "${projects[@]}"; do
     echo "[*] Building $project"
