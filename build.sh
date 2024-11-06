@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 COPR_PROJECT="nabu-support"
+RELEASE_VER="f41"
 
 projects=(alsa-ucm-conf-xiaomi-nabu tqftpserv xiaomi-nabu-firmware)
 
@@ -18,6 +19,10 @@ for project in "${projects[@]}"; do
         ./prebuild.sh
     fi
     spectool -g "$project".spec
-    fedpkg --release f40 copr-build $COPR_PROJECT --nowait
+    if [ "$LOCAL" == "1" ]; then 
+        fedpkg --release $RELEASE_VER local
+    else
+        fedpkg --release $RELEASE_VER copr-build $COPR_PROJECT --nowait
+    fi
     cd ..
 done
