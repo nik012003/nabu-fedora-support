@@ -7,11 +7,16 @@ URL: https://github.com/linux-msm/tqftpserv
 Source: %{url}/archive/%{version}.zip
 
 BuildRequires: make
+BuildRequires: libzstd-devel
 BuildRequires: meson
+BuildRequires: cmake
 BuildRequires: gcc
 BuildRequires: qrtr-devel
+BuildRequires: systemd
 BuildRequires: systemd-devel
-BuildRequires:  systemd-rpm-macros
+BuildRequires: systemd-rpm-macros
+Requires: libzstd
+Requires: systemd
 
 %description
 TFTP server working over the QRTR protocol, enabling basic 
