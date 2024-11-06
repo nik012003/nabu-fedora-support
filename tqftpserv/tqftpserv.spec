@@ -1,5 +1,5 @@
 Name: tqftpserv
-Version: 37669ab1e2993f089c8e0bc9eddd353f625f5cda
+Version: 859c6e3969ffd5e4e53b07991ab9a5b46d89042d
 Release: %autorelease
 Summary: Trivial File Transfer Protocol server over AF_QIPCRTR
 License: BSD-3-Clause
@@ -7,6 +7,7 @@ URL: https://github.com/linux-msm/tqftpserv
 Source: %{url}/archive/%{version}.zip
 
 BuildRequires: make
+BuildRequires: meson
 BuildRequires: gcc
 BuildRequires: qrtr-devel
 BuildRequires: systemd-devel
@@ -21,10 +22,11 @@ found in recent Qualcomm SoC's.
 %autosetup -p1
 
 %build
-%make_build prefix="%{_prefix}"
+%meson
+%meson_build
 
 %install
-%make_install prefix="%{_prefix}"
+%meson_install
 
 %post
 %systemd_post %{name}.service
