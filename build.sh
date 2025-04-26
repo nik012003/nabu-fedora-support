@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 COPR_PROJECT="nabu-support"
-RELEASE_VER="f41"
+RELEASE_VER="f42"
 
 projects=(alsa-ucm-conf-xiaomi-nabu tqftpserv xiaomi-nabu-firmware)
 
