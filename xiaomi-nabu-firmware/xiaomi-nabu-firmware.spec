@@ -3,7 +3,7 @@
 Name: xiaomi-nabu-firmware
 Version: 1.0
 Release: %autorelease
-Summary: ALSA ucm2 settings for Xiaomi Mi Pad 5 (nabu)
+Summary: Firmware package for xiaomi-nabu
 URL: https://github.com/map220v/ubuntu-xiaomi-nabu
 Source1: %{name}-%{version}.tar.gz
 License: Unknown
