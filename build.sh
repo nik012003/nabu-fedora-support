@@ -21,6 +21,8 @@ for project in "${projects[@]}"; do
     spectool -g "$project".spec
     if [ "$LOCAL" == "1" ]; then 
         fedpkg --release $RELEASE_VER local
+    elif [ "$MOCKBUILD" == "1" ]; then 
+        fedpkg --release $RELEASE_VER mockbuild
     else
         fedpkg --release $RELEASE_VER copr-build $COPR_PROJECT --nowait
     fi
