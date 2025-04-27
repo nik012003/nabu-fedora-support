@@ -1,6 +1,6 @@
 Name: tqftpserv
-Version: 859c6e3969ffd5e4e53b07991ab9a5b46d89042d
-Release: %autorelease
+Version: 533779cb8a1843581d5422a7f0aae1a35e6ab956
+Release: 1
 Summary: Trivial File Transfer Protocol server over AF_QIPCRTR
 License: BSD-3-Clause
 URL: https://github.com/linux-msm/tqftpserv
