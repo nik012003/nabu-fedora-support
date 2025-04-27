@@ -1,7 +1,7 @@
 Name: linux-sm8150
 ExclusiveArch: aarch64
 Version: 6.14
-Release: %autorelease
+Release: 2
 Summary: AIO package for linux kernel, modules and headers for sm8150 devices.
 URL: https://gitlab.com/sm8150-mainline/linux
 Source1: %{url}/-/archive/sm8150/%{version}/linux-sm8150-%{version}.tar.gz

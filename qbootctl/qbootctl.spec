@@ -1,7 +1,7 @@
 %define service_name qbootctl-mark-bootable.service
 Name: qbootctl
 Version: 0.2.2
-Release: %autorelease
+Release: 2
 Summary: Qualcomm bootctl HAL for Linux
 License: BSD-3-Clause
 URL: https://github.com/linux-msm/qbootctl
