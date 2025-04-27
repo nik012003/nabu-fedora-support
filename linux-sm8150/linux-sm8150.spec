@@ -35,6 +35,13 @@ tar -xzf %{SOURCE1}
 
 %build
 cd %{name}-%{version}
+cat >> .config << EOF
+CONFIG_FW_LOADER_COMPRESS=y
+CONFIG_FW_LOADER_COMPRESS_XZ=y
+CONFIG_FW_LOADER_COMPRESS_ZSTD=y
+CONFIG_OF_RESOLVE=y
+CONFIG_OF_OVERLAY=y
+EOF
 make defconfig sm8150.config 
 make -j`nproc`
 
