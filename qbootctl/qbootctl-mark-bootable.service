@@ -4,8 +4,8 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/qbootctl -m a
-ExecStart=/usr/local/bin/qbootctl -m b
+ExecStart=/usr/sbin/qbootctl -m a
+ExecStart=/usr/sbin/qbootctl -m b
 
 [Install]
 WantedBy=multi-user.target
