@@ -1,7 +1,7 @@
 Name: linux-sm8150
 ExclusiveArch: aarch64
 Version: 6.14
-Release: 2
+Release: 3
 Summary: AIO package for linux kernel, modules and headers for sm8150 devices.
 URL: https://gitlab.com/sm8150-mainline/linux
 Source1: %{url}/-/archive/sm8150/%{version}/linux-sm8150-%{version}.tar.gz
@@ -35,6 +35,7 @@ tar -xzf %{SOURCE1}
 
 %build
 cd %{name}-%{version}
+make defconfig sm8150.config 
 cat >> .config << EOF
 CONFIG_FW_LOADER_COMPRESS=y
 CONFIG_FW_LOADER_COMPRESS_XZ=y
@@ -42,7 +43,6 @@ CONFIG_FW_LOADER_COMPRESS_ZSTD=y
 CONFIG_OF_RESOLVE=y
 CONFIG_OF_OVERLAY=y
 EOF
-make defconfig sm8150.config 
 make -j`nproc`
 
 %install
