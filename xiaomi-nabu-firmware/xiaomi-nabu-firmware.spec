@@ -1,7 +1,7 @@
 %global _firmwarepath /usr/lib/firmware
 
 Name: xiaomi-nabu-firmware
-Version: 1.0
+Version: 1.1
 Release: %autorelease
 Summary: Firmware package for xiaomi-nabu
 URL: https://github.com/map220v/ubuntu-xiaomi-nabu
